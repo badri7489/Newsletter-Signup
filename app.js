@@ -30,6 +30,20 @@ app.post("/", function (req, res) {
 	};
 
 	const jsonData = JSON.stringify(data);
+
+	const url = "https://us17.api.mailchimp.com/3.0/lists/a26566755d";
+
+	const options = {
+		method: "POST",
+		auth: "badri7489:56c6592d8ce29e34ca028000026d71df-us17",
+	};
+	const request = https.request(url, options, function (response) {
+		response.on("data", function (data) {
+			console.log(JSON.parse(data));
+		});
+	});
+	request.write(jsonData);
+	request.end();
 });
 
 app.listen(3000, function () {
