@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
 
 	const options = {
 		method: "POST",
-		auth: "badri7489:3b49ee690b796efc72d03e8dab6cd3ba-us17",
+		auth: "badri7489:******************************",
 	};
 	const request = https.request(url, options, function (response) {
 		if (response.statusCode === 200) {
@@ -61,7 +61,7 @@ app.listen(process.env.PORT || 3000, function () {
 });
 
 // API Key
-// 3b49ee690b796efc72d03e8dab6cd3ba-us17
+// ******************************
 
 // List ID
 // a26566755d
